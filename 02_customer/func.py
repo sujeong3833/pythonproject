@@ -71,26 +71,5 @@ def next_data(custlist,page):
         print(custlist[page])
     return page
 
-def delute_data(custlist,page):
-     delok = 0
-    for i,item in enumerate(custlist):
-            if item['email'] == choice1:
-                name = custlist.pop(i)['name']
-                print(f'{name}고객님의 정보가 삭제되었습니다.')
-                delok = 1
-                break
-        if delok == 0:
-            print('등록되지 않는 이메일입니다.')
-            print(custlist)
-    elif choice=="U": 
-        print("고객 정보 수정")
-        while True:
-            choice1 = input('수정하려는 이메일을 입력하세요 >>>')
-            idx = -1
-            for i in range(0,len(custlist)):
-                if custlist[i]['email'] == choice1:
-                    idx = i
-                    break
-            if idx == -1:
-                print('등록되지 않은 이메일입니다.')
-                break
+
+    
